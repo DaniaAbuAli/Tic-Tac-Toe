@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      href="images/favicon.jpg"
+      sizes="16x16"
+      type="image/jpeg"
+    />
+    <link
+      rel="icon"
+      href="images/favicon.jpg"
+      sizes="32x32"
+      type="image/jpeg"
+    />
+    <link
+      rel="icon"
+      href="images/favicon.jpg"
+      sizes="48x48"
+      type="image/jpeg"
+    />
+    <link rel="icon" href="images/favicon.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="select-box show check">
+      <h2>Tic Tac Toe</h2>
+      <p>Select the number of players :</p>
+      <div class="buttons">
+        <button class="player one">1 player</button>
+        <button class="player two">2 players</button>
+      </div>
+    </div>
+    <div class="players-name hide check">
+      <h2>Enter Players Names</h2>
+      <form action="">
+        <input type="text" placeholder="Player X" name="player X" />
+        <input type="text" placeholder="Player O" name="player O" />
+        <input type="submit" value="Start Game" />
+      </form>
+    </div>
+    <div class="container hide">
+      <div class="board">
+        <h3 class="title"></h3>
+        <div class="grid">
+          <div class="box" id="box-1"></div>
+          <div class="box" id="box-2"></div>
+          <div class="box" id="box-3"></div>
+          <div class="box" id="box-4"></div>
+          <div class="box" id="box-5"></div>
+          <div class="box" id="box-6"></div>
+          <div class="box" id="box-7"></div>
+          <div class="box" id="box-8"></div>
+          <div class="box" id="box-9"></div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="one">
+          <p><i class="fa-solid fa-x"></i>Player 1 : <span>0</span></p>
+        </div>
+        <div class="two">
+          <p><i class="fa-solid fa-o"></i>Player 2 : <span>0</span></p>
+        </div>
+        <button class="play-again">Play Again</button>
+        <button class="reset-game">Reset Game</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

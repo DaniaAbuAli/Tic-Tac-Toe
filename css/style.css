@@ -1,0 +1,203 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #b1d4e0;
+  --secondary-color: #0c2d48;
+  --x-color: #3193cc;
+  --o-color: #13518b;
+}
+body {
+  font-family: "Geist", sans-serif;
+  background-color: var(--main-color);
+}
+.select-box {
+  background-color: whitesmoke;
+  width: 400px;
+  height: 220px;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  color: var(--secondary-color);
+  box-shadow: 1px 1px 14px 0px var(--o-color);
+}
+.select-box h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.select-box p {
+  font-size: 17px;
+  font-weight: 500;
+}
+.select-box .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.select-box .buttons button {
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  color: var(--secondary-color);
+}
+.select-box .buttons button:hover {
+  /* opacity: 0.6; */
+  background-color: #86aab8;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block;
+}
+@media (max-width: 767px) {
+  .select-box {
+    width: 350px;
+  }
+}
+.players-name {
+  background-color: whitesmoke;
+  padding: 20px;
+  width: 450px;
+  height: 300px;
+  border-radius: 5px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  box-shadow: 1px 1px 14px 0px var(--o-color);
+}
+.players-name form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.players-name h2 {
+  font-size: 30px;
+  color: var(--secondary-color);
+  margin-top: -15px;
+}
+.players-name form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: #ddd 1px solid;
+}
+.players-name form input:focus {
+  outline-color: #d6d4d4;
+}
+.players-name form [type="submit"] {
+  width: 30%;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--secondary-color);
+  position: absolute;
+  transform: translate(-50%, -100%);
+  top: calc(100% - 20px);
+  left: 50%;
+  margin-top: -15px;
+  background-color: whitesmoke;
+  transition: 0.3s;
+}
+.players-name form [type="submit"]:hover {
+  background-color: #e0e0e0;
+}
+@media (max-width: 767px) {
+  .players-name {
+    width: 350px;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.container .board .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  width: 300px;
+  height: 300px;
+}
+.container .board .grid .box {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: #ddd solid 1px;
+  font-weight: 700;
+  font-size: 40px;
+  width: 98px;
+  height: 98px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .board h3 {
+  color: var(--secondary-color);
+  text-align: center;
+}
+.container .info .one,
+.container .info .two {
+  background-color: whitesmoke;
+  width: 300px;
+  border-radius: 5px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.container .info .one p,
+.container .info .two p {
+  padding: 10px;
+}
+.container .info .one p i,
+.container .info .two p i {
+  margin-right: 10px;
+}
+.container .info .one p i {
+  color: var(--x-color);
+}
+.container .info .two p i {
+  color: var(--o-color);
+}
+.container .play-again,
+.container .reset-game {
+  color: var(--secondary-color);
+  border: #ddd solid 1px;
+  padding: 8px;
+  width: 148px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: 0.3s;
+}
+.container .play-again:hover,
+.container .reset-game:hover {
+  background-color: #e0e0e0;
+}
+.container .board .grid .player-1 {
+  color: var(--x-color);
+}
+.container .board .grid .player-2 {
+  color: var(--o-color);
+}
